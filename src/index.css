@@ -13,7 +13,12 @@
 html, body {
   font-weight: 400;
   font-family: 'Inter';
-  color: var(--main-color);
+  background-color: var(--background-color);
+}
+
+.app {
+  padding: 3rem;
+  max-width: 1400px;
 }
 
 h1 {
@@ -28,4 +33,49 @@ hr {
   border-top: 1px solid var(--accent-color);
   margin: 0rem 0.5rem;
   padding: 0;
+}
+
+.project-tile {
+  height: 16rem;
+  width: 16rem;
+  margin: 2rem;
+  perspective: 1000px;
+}
+
+.tile-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.project-tile:hover .tile-inner {
+  transform: rotateY(180deg);
+}
+
+.tile-front, .tile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem; /*rounded corners*/
+  /* box-shadow: 10px 10px var(--main-color); */
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-color: var(--container-hover-color);
+}
+
+.tile-back {
+  transform: rotateY(180deg);
+}
+
+.tile-inner-text {
+  padding: 2rem;
+}
+
+.tile-img {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
 }
