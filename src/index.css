@@ -35,6 +35,11 @@ hr {
   padding: 0;
 }
 
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .project-tile {
   height: 16rem;
   width: 16rem;
@@ -46,7 +51,7 @@ hr {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.8s;
+  transition: transform 0.5s;
   transform-style: preserve-3d;
 }
 
